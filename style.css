@@ -1,0 +1,261 @@
+/* Reuse existing font settings */
+@font-face { 
+    font-family: my-font;
+    src: url(CinzelDecorative-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #085c7e, rgba(208, 232, 255, 0.692));
+    color: #012c3d;
+    font-family: 'my-font';
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0c4961;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #d3eaff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #085c7e;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.navbar ul li a.active {
+    background-color: #085c7e;
+    color: #fff;
+}
+
+/* Header */
+header {
+    margin: 20px 0;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #d3eaff;
+}
+
+.unique {
+    font-size: 2.8em;
+    color: #d3eaff;
+    margin-bottom: 20px;
+}
+
+/* Content */
+section {
+    padding: 20px;
+}
+
+.abt {
+    margin: 20px;
+    padding: 10px;
+    color: #03384d;
+    font-size: 1.2em;
+}
+
+/* Timeline for About Me page */
+.timeline {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 1.1em;
+    color: #085c7e;
+}
+
+.timeline li {
+    margin-bottom: 15px;
+}
+
+/* Cards for portfolio */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.c1 {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    background-color: #d3eaff;
+    color: #085c7e;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.c1:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: #085c7e;
+    color: #fff;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+}
+
+.footer {
+    background-color: #085c7e;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.footer a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.footer2 {
+    background-color: #085c7e;
+    padding: 5px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Social Media Icons in Footer */
+footer .fa-brands {
+    font-size: 2em;
+    color: #fff;
+    margin: 10px;
+}
+
+footer .fa-brands:hover {
+    color: #08b0f3;
+}
+
+/* Form */
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+    color: #033244;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #085c7e;
+    font-style: oblique;
+}
+
+.contact-form button {
+    background-color: #085c7e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+}
+
+.contact-form button:hover {
+    background-color: #2b5f74;
+}
+
+/* Styling for About Page */
+footer {
+    margin-top: 30px;
+}
+
+.contact-form ::placeholder{
+    color: #05384d;
+}
+a{
+ text-decoration: none;
+ color: #346072;
+}
+a:hover{
+    color: #a7cfdf;
+}
