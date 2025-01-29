@@ -8,46 +8,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Areeb Bhatti</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <!-- Header -->
     <header>
         <h1 class="unique">About Me</h1>
     </header>
 
-    <section>
-        <p class="abt">
-            Hello! I'm Areeb Bhatti,a student doing bachelor's from SMIU in 4 semester  a passionate web developer with a keen eye for design and a strong foundation in HTML, CSS, and Bootstrap. My journey in web development began with a curiosity about how websites work and evolved into a full-blown passion for creating seamless, visually appealing online experiences.
-            <br><br>
-           
-            <br><br>
-            Here's a timeline of my journey:
-        </p>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="intro">
+            <p>
+                Hello! I'm <strong>Areeb Bhatti</strong>, a student pursuing a bachelor's degree at SMIU, currently in my 4th semester. I'm a passionate web developer with a keen eye for design and a strong foundation in HTML, CSS, JavaScript, and Bootstrap. My journey began with a curiosity about how websites work, which has grown into a passion for creating seamless and visually appealing online experiences.
+            </p>
+        </div>
 
-        <ul class="timeline">
-            <li>2024: Started learning web development.</li>
-            
-            <li>2025: Created a portfolio showcasing key projects and skills.</li>
-        </ul>
+        <div class="journey">
+            <h2>My Journey</h2>
+            <ul class="timeline">
+                <li><span>2024:</span> Started learning web development, building foundational skills.</li>
+                <li><span>2025:</span> Developed a portfolio showcasing key projects and skills.</li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h2>Skills & Expertise</h2>
+            <p>
+                Over time, I’ve honed my skills in:
+            </p>
+            <ul>
+                <li>Front-end Development: HTML, CSS, Bootstrap</li>
+                <li>Interactive Elements: JavaScript</li>
+                <li>Responsive Design for mobile and desktop platforms</li>
+                <li>Version Control: Git & GitHub</li>
+            </ul>
+        </div>
     </section>
-    <br><br>
-           
-    <br><br> 
+</br>
+</br>
+</br></br>
 
+    <!-- Footer -->
     <footer>
         <div class="footer">
-            <a href="#" class="fa-brands fa-instagram"></a>
-            <a href="#" class="fa-brands fa-twitter"></a>
-            <a href="#" class="fa-brands fa-github"></a>
-        </div>
-        <div class="footer2">
-            <p class="frc">&copy; 2025 All rights reserved to Areeb Bhatti<br>Designed by Areeb Bhatti</p>
+            <div class="social-links">
+                <a href="#" class="fa-brands fa-instagram"></a>
+                <a href="#" class="fa-brands fa-twitter"></a>
+                <a href="#" class="fa-brands fa-github"></a>
+            </div>
+            <p>&copy; 2025 All rights reserved to Areeb Bhatti<br>Designed by Areeb Bhatti</p>
         </div>
     </footer>
+    
+    <script>
+        // Navbar toggle functionality
+        const toggleButton = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
