@@ -556,7 +556,7 @@ h2{
   
 }
 .dis-1:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 .dis-2{
     position: relative;
@@ -583,7 +583,7 @@ h2{
     color: white;
     border-radius: 8px;
     padding: 18px;
-    font-size: 26px;
+    font-size: 22px;
     text-align: center;
     /* font-weight: 600; */
   
@@ -613,7 +613,7 @@ h2{
     }
     .content{
         padding: 20px;
-    font-size: 16px;
+    font-size: 11px;
     text-align: center;
     }
     img{
