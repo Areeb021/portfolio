@@ -1,0 +1,627 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Source_Serif_4/static/SourceSerif4-Italic.ttf');
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto';
+    /* overflow:visible; */
+    background-color: rgba(3, 0, 0, 0.925);
+    overflow-x: hidden;
+}
+.navbar {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;  
+    background-color: rgba(6, 6, 7, 0.274);
+    color: white;
+    padding: 0 20px; 
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: 5px 5px 25px  rgba(16, 5, 73, 0.945);
+   z-index: 1000;
+   margin-bottom: 2px;
+   backdrop-filter: blur(12px);
+   position: fixed;
+   top: 0;
+  
+   z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    position: relative; /* Needed for absolute positioning of dropdown */
+    margin-right: 25px;
+    padding: 10px; /* Adds padding for better hover effect */
+    transition: transform 0.8s ease-in-out;
+}
+nav ul li:hover{
+    transform: scale(1.05);
+}
+nav ul  :hover{
+    background-color: gray;
+    border-radius: 8px;
+    transition: ease-out(1m);
+}
+
+
+nav ul li:hover .drop-down {
+    display: block; /* Show dropdown when hovering over li */
+    background-color: black;
+}
+
+.drop-down {
+    display: none;
+    position: absolute; /* Makes dropdown appear below the parent */
+    top: 100%; /* Places dropdown below the main menu */
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    min-width: 150px; /* Adjust width */
+}
+
+.drop-down ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drop-down ul li {
+    padding: 8px;
+    margin: 0;
+    white-space: nowrap; /* Prevents text from breaking */
+    background-color: black;
+}
+
+.drop-down ul li:hover {
+    background-color: gray; /* Adds a hover effect */
+    border-radius: 8px;
+}
+.container { 
+    background-image: url("photo-1510519138101-570d1dca3d66.jpg");
+    background-size: cover; 
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 5px 5px 18px rgba(216, 215, 215, 0.322);
+}
+.container p{
+    font-size: 22px;
+    
+    font-style: oblique;
+    position: relative;
+    left: 50px;   
+    text-align: left;
+   
+}
+.unique{
+    font-size: 32px;
+    font-weight: bold;
+}
+/* Default styles apply for larger screens (above 768px) */
+
+/* 📌 Small Screens (Tablets & Mobiles) */
+@media (max-width: 768px) {
+    .container {
+        height: auto; /* Adjust height for smaller screens */
+        flex-direction: column; /* Stack content vertically */
+        justify-content: center; /* Center content */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .container p {
+        font-size: 18px; /* Reduce font size */
+        left: 0; /* Reset left positioning */
+        text-align: center;
+    }
+
+    .unique {
+        font-size: 26px; /* Reduce heading size */
+    }
+}
+
+/* 📌 Extra Small Screens (Phones below 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .container p {
+        font-size: 16px;
+    }
+
+    .unique {
+        font-size: 22px;
+    }
+}
+
+
+.about-sec{
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(to bottom, black, rgba(16, 5, 73, 0.945));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(16, 5, 73, 0.945);
+    font-style: oblique;
+    color: white;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.301);
+    
+}
+
+
+
+.abt-head{
+    position: relative;
+    top: 20px;
+    z-index: 1000;
+}
+
+
+
+
+.left-abt{
+    height: 40vh;
+    width: 48%;
+    margin: 4px;
+    border-radius: 8px;
+   
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    font-size: 18px;
+    line-height: normal;
+    padding: 50px;
+    text-align: justify;
+   font-weight: 100;
+    text-align: left;
+     background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    
+}
+
+.right-abt{
+    height: 40vh;
+    width: 48%;
+    background-image: url(pic\ 1.png);
+    margin: 4px;
+    border-radius: 8px;
+    background-size: cover; 
+    background-position: center;
+    color: white;
+    
+    transition: transform 0.3s ease-in-out;
+ 
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  
+    
+
+}
+.left-abt:hover, .right-abt:hover {
+    transform: scale(1.05);
+}
+/* 📌 Tablets & Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .about-sec {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow dynamic height */
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .left-abt, .right-abt {
+        width: 90%; /* Make elements take full width */
+        height: auto;
+        padding: 30px;
+    }
+
+    .right-abt {
+        background-size: contain; /* Adjust image fit */
+        background-repeat: no-repeat;
+        height: 250px;
+    }
+}
+
+/* 📌 Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-sec {
+        padding: 30px 15px;
+    }
+
+    .left-abt {
+        font-size: 16px; /* Reduce font size for readability */
+        padding: 20px;
+    }
+
+    .right-abt {
+        height: 200px; /* Adjust image height */
+    }
+}
+
+.edu{
+        height: 60vh;
+    width: 100%;
+    color: white;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.137);
+    
+}
+h2{
+
+    color: white;
+    font-size: 38px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: 'Roboto';
+}
+
+
+.education-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: linear-gradient(to bottom,rgba(16, 5, 73, 0.945), black, rgba(16, 5, 73, 0.945));
+    
+    color: white;
+    box-shadow: 0px 8px 15px  rgba(218, 214, 214, 0.342);
+
+}
+
+.education, .skills {
+    width: 45%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.658);
+    transition: transform 0.3s ease-in-out;
+}
+
+.education:hover, .skills:hover {
+    transform: scale(1.05);
+}
+
+.edu-head {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.edu-item {
+    margin-bottom: 15px;
+}
+
+.edu-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.edu-item p, .edu-item span {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.footer {
+    background: linear-gradient(to bottom, black, rgba(16, 5, 73, 0.945));
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+   
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-container div {
+    width: 22%;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footer h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer p, .footer a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+.footer-links ul li{
+     list-style: none;
+}
+.footer-social a {
+    display: inline-block;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    transform: scale(1.1);
+    color: #ddd;
+}
+.fa-house{
+ position: absolute;
+ left: 1150px;
+}
+/* 📌 Tablets & Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .education-skills {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 30px;
+    }
+
+    .education, .skills {
+        width: 90%; /* Take full width */
+        margin-bottom: 20px;
+        padding: 25px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container div {
+        width: 100%;
+        min-width: unset;
+        margin-bottom: 20px;
+    }
+}
+
+/* 📌 Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 30px; /* Reduce heading size */
+    }
+
+    .education, .skills {
+        width: 100%; /* Full width for better display */
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 180px 10px;
+    }
+
+    .footer h2 {
+        font-size: 18px; /* Smaller headings */
+    }
+
+    .footer p, .footer a {
+        font-size: 14px;
+    }
+
+    .fa-house {
+        left: auto; 
+        right: 10px; /* Align icon to the right */
+        top: 10px;
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+   
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        height: 50px;
+        background-color: black;
+        width: 100%;
+        
+    }
+
+    /* Hide nav by default */
+    nav {
+        display: none;
+    }
+
+    /* Show nav when hovering over the house icon */
+    .fa-house:hover + nav,
+    .navbar:hover nav {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        background-color: black;
+        z-index: 1000;
+        
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+       
+    }
+
+    .drop-down {
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    nav ul li {
+        font-size: 16px;
+    }
+
+    .drop-down ul li {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+.mmain{
+    /* height: 100vh; */
+    width: 100%;
+    color: white;
+    position:relative;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.dis-1{
+  height: 30vh;
+  width: 80%;
+  background: linear-gradient(to bottom,  rgba(42, 1, 75, 0.945),rgba(107, 1, 168, 0.637));
+  margin: 8px;
+  border-radius: 10px;
+  box-shadow:  0px 5px 15px rgba(183, 126, 248, 0.705);
+  backdrop-filter: blur(10px);
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ /* padding: 8px; */
+  
+}
+.dis-1:hover{
+    transform: scale(1.05);
+}
+.dis-2{
+    position: relative;
+    right: 18%;
+}
+
+.pic{
+    height: 92%;
+    width: 35%;
+    /* background-color: yellowgreen; */
+  /* margin: 10px; */
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.781);
+}
+.pic:hover{
+    transform: scale(1.05);
+}
+.content{
+    height: 92%;
+    width: 64%;
+    /* background-color: #00000077; */
+    /* backdrop-filter: blur(10px); */
+    margin: 3px;
+    color: white;
+    border-radius: 8px;
+    padding: 18px;
+    font-size: 26px;
+    text-align: center;
+    /* font-weight: 600; */
+  
+}
+@media (max-width: 760px){
+    body{
+        overflow-x: hidden;
+    }
+    .mmain{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dis-1{
+        width: 80%;
+        height: 220px;
+        margin: 2;
+    }
+    .dis-2{
+        position: relative;
+        right: 0;
+    }
+    .pic{
+        height: 70%;
+        width: 45%;
+        
+    }
+    .content{
+        padding: 20px;
+    font-size: 16px;
+    text-align: center;
+    }
+    img{
+        height: 160px;
+        width: 150px;
+    }
+}
+img{
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px black;
+}
