@@ -25,7 +25,8 @@ body{
     height: 60px;
     width: 100%;
     display: flex;
-    align-items: center;  
+    align-items: center;
+    justify-content: space-between;  
     background-color: rgba(6, 6, 7, 0.274);
     color: white;
     padding: 0 20px; 
@@ -401,10 +402,10 @@ h2{
     transform: scale(1.1);
     color: #ddd;
 }
-.fa-house{
+/* fa-house{
  position: absolute;
  left: 1150px;
-}
+}. */
 /* 📌 Tablets & Small Screens (max-width: 768px) */
 @media (max-width: 768px) {
     .education-skills {
@@ -454,13 +455,13 @@ h2{
         font-size: 14px;
     }
 
-    .fa-house {
+    /* .fa-house {
         left: auto; 
         right: 10px; /* Align icon to the right */
-        top: 10px;
+        /* top: 10px;
         font-size: 20px;
         padding-bottom: 50px;
-    }
+    } */ 
    
 }
 
@@ -568,8 +569,10 @@ h2{
     width: 35%;
     /* background-color: yellowgreen; */
   /* margin: 10px; */
-  border-radius: 8px;
+  /* border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.781);
+} */
+
 }
 .pic:hover{
     transform: scale(1.05);
@@ -598,8 +601,8 @@ h2{
         justify-content: center;
     }
     .dis-1{
-        width: 80%;
-        height: 220px;
+        width: 70%;
+        height: 180px;
         margin: 2;
     }
     .dis-2{
@@ -607,13 +610,14 @@ h2{
         right: 0;
     }
     .pic{
-        height: 70%;
-        width: 45%;
+        height: 100%;
+        width: 55%;
+      
         
     }
     .content{
         padding: 20px;
-    font-size: 11px;
+    font-size: 8px;
     text-align: center;
     }
     img{
@@ -621,7 +625,54 @@ h2{
         width: 150px;
     }
 }
-img{
-    border-radius: 8px;
-    box-shadow: 5px 5px 10px black;
+
+#p1{
+    background: url(JS-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#p2{
+    background: url(JS-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#p3{
+    background: url(JS-3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#p4{
+    background: url(JS-4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pic1{
+    background: url(CSS-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pic2{
+    background: url(css-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pic3{
+    background: url(CSS-3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pic4{
+    background: url(HTMl-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pic5{
+    background: url(HTMl-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pic6{
+    background: url(HTml-3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
